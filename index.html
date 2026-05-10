@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>Form Input Validation</title>
+  </head>
+  <body class="container">
+    <form class="form">
+      <h1 class="form_heading">Create Account</h1>
+      <div class="form_group">
+        <label for="fullname">Full Name</label>
+        <input id="fullname" type="text" required />
+      </div>
+      <div class="form_group">
+        <label for="email">Email Address</label>
+        <input id="email" type="email" required />
+      </div>
+      <div class="form_group">
+        <label for="password">Password</label>
+        <input id="password" type="password" required />
+      </div>
+      <div class="form_group">
+        <label for="confirm_password">Confirm Password</label>
+        <input id="confirm_password" type="password" required />
+      </div>
+      <div class="form_group">
+        <label for="age">Age</label>
+        <input id="age" type="number" required />
+      </div>
+      <button id="submit_button" type="submit" disabled>Submit</button>
+    </form>
+  </body>
+</html>

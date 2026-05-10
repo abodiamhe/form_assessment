@@ -1,0 +1,127 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+  min-height: 100vh;
+  line-height: 1.7;
+  color: #333;
+  font-weight: 400;
+  background-image:
+    linear-gradient(
+      to right bottom,
+      rgba(255, 0, 0, 0.153),
+      rgba(29, 79, 216, 0.373)
+    ),
+    url('./img/pattern.svg');
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns:
+    minmax(3rem, 1fr) repeat(10, minmax(min-content, 14rem))
+    minmax(3rem, 1fr);
+}
+
+.form {
+  grid-column: 4/10;
+  /* background-color: #fae9af8c; */
+  background-color: #f4f7fb;
+  border-radius: 12px;
+  padding: 5rem;
+  margin: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form_heading {
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+.form_group {
+  margin-bottom: 1.4rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1.6rem;
+  transition: 0.3s ease;
+  border: 1px solid #ccc;
+}
+
+input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+input.valid {
+  border-color: green;
+}
+
+input.invalid {
+  border-color: red;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 1.2rem;
+  /* background: #1d4ed8; */
+  background: #2563eb;
+
+  color: #fff;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  border: none;
+  width: 100%;
+  margin-top: 1.4rem;
+  transition: 0.3s ease;
+}
+
+button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .form {
+    grid-column: 3/11;
+  }
+
+  .form_heading {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 23.125em) {
+  .form_heading {
+    font-size: 2rem;
+  }
+}
